@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ntxzip7aq-python-gitops
+  description: This is GitOps manifest for ntxzip7aq-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=ntxzip7aq-python
+    backstage.io/kubernetes-id: ntxzip7aq-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: ntxzip7aq-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ntxzip7aq-python
